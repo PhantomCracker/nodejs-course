@@ -1,10 +1,9 @@
 const request = require('request');
 
 const forecast = (longitude, latitude, callback) => {
-    const url = "http://api.weatherstack.com/current?access_key=81f93c4a636704c35c4f8c3dfbb12ae0&query=" + encodeURIComponent(longitude) + "," + encodeURIComponent(latitude);
+    const url = "http://api.weatherstack.com/current?access_key=81f93c4a636704c35c4f8c3dfbb12ae0&query=" + encodeURIComponent(longitude) + "," + encodeURIComponent(latitude) + "&units=m";
 
     request({ url: url, json: true }, (error, response)  => {
-
         if(error) {
             callback("Unable to access the weather service", undefined);
         }
@@ -16,6 +15,7 @@ const forecast = (longitude, latitude, callback) => {
                 location: response.body.location.name,
                 country: response.body.location.country,
                 region: response.body.location.region,
+                body: response.body
             });
         }
     });
