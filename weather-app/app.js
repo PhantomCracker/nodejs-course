@@ -20,18 +20,18 @@ if(!address) {
 }
 
 else {
-    geocode(address, (error, data) => {
+    geocode(address, (error, { longitude, latitude, location } = {}) => {
         if(error) {
             return console.log(error);
         }
         else {
-            forecast(data.longitude, data.latitude, (error, forecastData) => {
+            forecast(longitude, latitude, (error, { location: forecastLocation, country, region}) => {
                 if(error) {
                     return console.log(error);
                 }
                 else {
-                    console.log(data.location);
-                    console.log("The location is " + forecastData.location + " and the country is " + forecastData.country + "; also the region is " + forecastData.region);
+                    console.log(location);
+                    console.log("The location is " + forecastLocation + " and the country is " + country + "; also the region is " + region);
                 }
             });
         }
