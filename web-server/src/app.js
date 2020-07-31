@@ -39,6 +39,22 @@ app.get('/weather', (req, res) => {
     });
 });
 
+app.get('/help/*', (req, res) => {
+    res.render("404", {
+        title: "Error 404",
+        name: "PhantomCracker",
+        description: "This HELP page has not been found"
+    });
+});
+
+app.get('*', (req, res) => {
+    res.render("404", {
+        title: "Error 404",
+        name: "PhantomCracker",
+        description: "The API url has not been found"
+    });
+});
+
 app.listen(3000, () => {
     console.log("Server is up on port 3000");
 });
