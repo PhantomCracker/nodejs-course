@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22b26435-e50d-408d-94b8-d6c1cb576cb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nodejs-course.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-manager/mongodb.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-manager/mongodb.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +71,8 @@
       <workItem from="1601459279742" duration="63000" />
       <workItem from="1601459357850" duration="1503000" />
       <workItem from="1601547731729" duration="756000" />
-      <workItem from="1601548628069" duration="4126000" />
+      <workItem from="1601548628069" duration="5855000" />
+      <workItem from="1601561147718" duration="786000" />
     </task>
     <servers />
   </component>

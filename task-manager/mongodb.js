@@ -11,6 +11,10 @@ const databaseName = "task-manager";
 
 const id = new ObjectID();
 console.log(id);
+console.log(id.getTimestamp());
+console.log(id.id);
+console.log(id.id.length);
+console.log(id.toHexString().length);
 
 MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: true }, (error, client) => {
     if (error) {
@@ -20,8 +24,9 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     const db = client.db(databaseName);
     // db.collection("Users").insertOne({
-    //     name: "Vlad",
-    //     age: 33
+    //     _id: id,
+    //     name: "John",
+    //     age: 35
     // }, (error, result) => {
     //     if (error) {
     //         return console.log("Unable to insert user");
