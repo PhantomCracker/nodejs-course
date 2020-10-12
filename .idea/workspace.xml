@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22b26435-e50d-408d-94b8-d6c1cb576cb3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/playground/5-promises.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-manager/mongodb.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-manager/mongodb.js" afterDir="false" />
     </list>
@@ -78,7 +79,7 @@
       <workItem from="1601909177268" duration="611000" />
       <workItem from="1602083528422" duration="27000" />
       <workItem from="1602508028037" duration="187000" />
-      <workItem from="1602508333512" duration="2478000" />
+      <workItem from="1602508333512" duration="4635000" />
     </task>
     <servers />
   </component>

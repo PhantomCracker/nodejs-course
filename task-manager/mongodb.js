@@ -17,37 +17,29 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         return console.log("Unable to connect to database!");
     }
     const db = client.db(databaseName);
-    // db.collection('Users').findOne({ _id: new ObjectID("5f75d4270f35ba353cae9830") }, (error, user) => {
-    //     if (error) {
-    //         return console.log("Unable to fetch the user");
+
+    // db.collection("Users").updateOne({
+    //     _id: new ObjectID("5f75b8c006d115048c707d48")
+    // }, {
+    //     // $set: {
+    //     //     name: 'Myke'
+    //     // }
+    //     $inc: {
+    //         age: 1
     //     }
-    //     console.log(user);
-    // });
-    //
-    // db.collection("Users").find({ age: 33 }).toArray((error, users) => {
-    //     if (error) {
-    //         return console.log("Could not fetch users");
-    //     }
-    //     console.log(users);
-    // });
-    //
-    // db.collection("Users").find({ age: 33 }).count((error, count) => {
-    //     if (error) {
-    //         return console.log("Could not fetch users");
-    //     }
-    //     console.log(count);
+    // }).then((result) => {
+    //     console.log(result);
+    // }).catch((error) => {
+    //     console.log(error);
     // });
 
-    db.collection('tasks-exercise').findOne({ _id: new ObjectID("5f75d584dea82743805609e0") }, (error, task) => {
-        if (error) {
-            return console.log("Unable to fetch the task");
+    db.collection("tasks-exercise").updateMany({ }, {
+        $set: {
+            completed: true
         }
-        console.log(task);
-    });
-    db.collection('tasks-exercise').find({ completed: false}).toArray((error, tasks) => {
-        if (error) {
-            return console.log("Unable to fetch tasks");
-        }
-        console.log(tasks);
+    }).then((result) => {
+        console.log(result);
+    }).catch((error) => {
+        console.log(error);
     });
 });
