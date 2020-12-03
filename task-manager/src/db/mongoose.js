@@ -24,6 +24,17 @@ const User = mongoose.model('User', {
             }
         }
     },
+    password: {
+        type: String,
+        required: true,
+        trim: true,
+        minlength: 7,
+        validate(value) {
+            if (value.toLowerCase().includes("password")) {
+                throw new Error("Your password is very weak");
+            }
+        }
+    },
     age: {
         type: Number,
         default: 0,
@@ -37,31 +48,35 @@ const User = mongoose.model('User', {
 
 const Task = mongoose.model('Task', {
     description: {
-        type: String
+        type: String,
+        required: true,
+        trim: true,
     },
     completed: {
-        type: Boolean
+        type: Boolean,
+        default: false
     }
 })
 
-const me = new User({
-    name: 'Vlad      ',
-    email: "   lala@gmail.com     "
-});
-
-me.save().then((me) => {
-    console.log(me);
-}).catch((error) => {
-    console.log('Error', error);
-});
-
-// const newTask = new Task({
-//     description: "This is the first task",
-//     completed: true
+// const me = new User({
+//     name: 'Vlad      ',
+//     email: "   lala@gmail.com     ",
+//     password: "testingPassword   "
 // });
 //
-// newTask.save().then((task) => {
-//     console.log(task);
+// me.save().then((me) => {
+//     console.log(me);
 // }).catch((error) => {
-//     console.log(error);
-// })
+//     console.log('Error', error);
+// });
+
+const newTask = new Task({
+    description: "This is the first task",
+    completed: true
+});
+
+newTask.save().then((task) => {
+    console.log(task);
+}).catch((error) => {
+    console.log(error);
+})
